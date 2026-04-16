@@ -325,14 +325,14 @@ document.addEventListener('DOMContentLoaded', initRippleEffect);
    SECURITY UTILITIES
    ================================================================ */
 
-/* Whitelist: maps local filename keys → YouTube embed URLs */
+/* Whitelist: maps local filename keys → Bunny.net embed URLs (Library ID: 639046) */
 const ALLOWED_VIDEOS = new Map([
-    ['headlights.mp4',              'https://www.youtube.com/embed/a381RRhpNh8?autoplay=1'],
-    ['0412.mp4',                    'https://www.youtube.com/embed/TwO3yFJCNXw?autoplay=1'],
-    ['iron decontamination .mp4',   'https://www.youtube.com/embed/GOc_DmH898s?autoplay=1'],
-    ['engine bay file.mp4',         'https://www.youtube.com/embed/HUkhb2afToA?autoplay=1'],
-    ['lexperienceeee.mp4',          'https://www.youtube.com/embed/gpekWlNlJB8?autoplay=1'],
-    ['standard package.mov',        'https://www.youtube.com/embed/C6_ummklYyA?autoplay=1'],
+    ['headlights.mp4',              'https://iframe.mediadelivery.net/embed/639046/db1a176a-9b69-4db4-9d71-6ed037b57868?autoplay=true'],
+    ['0412.mp4',                    'https://iframe.mediadelivery.net/embed/639046/095fd7f2-4693-420d-8ebd-e79b57168975?autoplay=true'],
+    ['iron decontamination .mp4',   'https://iframe.mediadelivery.net/embed/639046/185f540d-6063-464e-8b6f-73f36f9424ea?autoplay=true'],
+    ['engine bay file.mp4',         'https://iframe.mediadelivery.net/embed/639046/39fbe8a0-6134-4e10-a1fa-7032812c944c?autoplay=true'],
+    ['lexperienceeee.mp4',          'https://iframe.mediadelivery.net/embed/639046/8685d7dd-f596-4618-81fa-097eedc08e5a?autoplay=true'],
+    ['standard package.mov',        'https://iframe.mediadelivery.net/embed/639046/f6dfd14c-a238-49e5-ab4c-2594dd62d149?autoplay=true'],
 ]);
 
 /**
