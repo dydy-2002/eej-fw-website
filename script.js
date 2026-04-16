@@ -1401,12 +1401,27 @@ function dismissEnrollPin(e) {
 
 (function initEnrollPinSwipe() {
     document.addEventListener('DOMContentLoaded', function () {
-        const pin = document.getElementById('enrollPin');
+        const pin      = document.getElementById('enrollPin');
+        const services = document.getElementById('services');
         if (!pin) return;
 
         /* Restore dismissed state across page navigations */
         if (sessionStorage.getItem('enrollPinDismissed') === '1') {
             pin.classList.add('enroll-pin--dismissed');
+        }
+
+        /* Show pin only while the Services section is on screen */
+        if (services && 'IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        pin.classList.add('enroll-pin--visible');
+                    } else {
+                        pin.classList.remove('enroll-pin--visible');
+                    }
+                });
+            }, { threshold: 0.05 }); /* trigger as soon as 5 % of section is visible */
+            observer.observe(services);
         }
 
         /* Swipe-right detection (mobile touch only) */

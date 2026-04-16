@@ -3538,13 +3538,15 @@ p {
     60%       { transform: translateY(-50%) translateX(-3px); }
 }
 
-/* ── Vertical tab anchored to the right edge of the services section ── */
+/* ── Vertical tab — visible only while the Services section is on screen ── */
 .enroll-pin {
     /* positioning: fixed to viewport right edge, centred vertically */
     position: fixed;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(110%); /* hidden off-screen by default */
+    opacity: 0;
+    pointer-events: none;
 
     /* rotate so text reads bottom → top */
     writing-mode: vertical-rl;
@@ -3635,14 +3637,21 @@ p {
     transform: rotate(90deg) translateX(-3px);
 }
 
+/* ── Visible: only when Services section is intersecting ── */
+.enroll-pin--visible {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* ── Dismiss transition ── */
 .enroll-pin {
     transition: background 0.3s ease, padding 0.3s ease, transform 0.4s cubic-bezier(0.4,0,0.6,1), opacity 0.4s ease;
 }
 .enroll-pin--dismissed {
     transform: translateX(110%) translateY(-50%) !important;
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* ── Close (×) button — mobile only ── */
@@ -3650,17 +3659,20 @@ p {
     display: none;
 }
 
-/* ── Mobile: switch to fixed so it follows scroll ── */
+/* ── Mobile ── */
 @media (max-width: 860px) {
     .enroll-pin {
         position: fixed;
         top: 75px;
         right: 0;
-        transform: none;
+        transform: translateX(110%); /* hidden by default on mobile too */
         padding: 20px 10px;
     }
+    .enroll-pin--visible {
+        transform: translateX(0);
+    }
     .enroll-pin--dismissed {
-        transform: translateX(110%) !important;  /* no translateY — top is pixel-fixed on mobile */
+        transform: translateX(110%) !important;
     }
     .enroll-pin__text strong { font-size: 0.72rem; }
     .enroll-pin__text em     { font-size: 0.66rem; }
