@@ -325,14 +325,14 @@ document.addEventListener('DOMContentLoaded', initRippleEffect);
    SECURITY UTILITIES
    ================================================================ */
 
-/* Whitelist of allowed local video filenames — prevents arbitrary URL injection */
-const ALLOWED_VIDEOS = new Set([
-    'headlights.mp4',
-    '0412.mp4',
-    'iron decontamination .mp4',
-    'engine bay file.mp4',
-    'lexperienceeee.mp4',
-    'standard package.mov',
+/* Whitelist: maps local filename keys → YouTube embed URLs */
+const ALLOWED_VIDEOS = new Map([
+    ['headlights.mp4',              'https://www.youtube.com/embed/a381RRhpNh8?autoplay=1'],
+    ['0412.mp4',                    'https://www.youtube.com/embed/TwO3yFJCNXw?autoplay=1'],
+    ['iron decontamination .mp4',   'https://www.youtube.com/embed/GOc_DmH898s?autoplay=1'],
+    ['engine bay file.mp4',         'https://www.youtube.com/embed/HUkhb2afToA?autoplay=1'],
+    ['lexperienceeee.mp4',          'https://www.youtube.com/embed/gpekWlNlJB8?autoplay=1'],
+    ['standard package.mov',        'https://www.youtube.com/embed/C6_ummklYyA?autoplay=1'],
 ]);
 
 /**
@@ -362,35 +362,28 @@ function isValidEmail(email) {
    ================================================================ */
 function openVideoModal(src) {
     const modal = document.getElementById('videoModal');
-    const video = document.getElementById('modalVideo');
-    if (!modal || !video) return;
-    /* Security: only allow whitelisted local filenames */
-    if (src && ALLOWED_VIDEOS.has(src)) {
-        video.src = src;
-        video.load();
-    } else if (src) {
+    const iframe = document.getElementById('modalVideo');
+    if (!modal || !iframe) return;
+    /* Security: only allow whitelisted YouTube embed URLs */
+    const embedUrl = ALLOWED_VIDEOS.get(src);
+    if (!embedUrl) {
         console.warn('openVideoModal: blocked non-whitelisted src:', src);
         return;
     }
+    iframe.src = embedUrl;
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
-    // Wait for the video to be ready before playing
-    video.addEventListener('canplay', function onReady() {
-        video.removeEventListener('canplay', onReady);
-        video.play().catch(() => {}); // silently ignore autoplay policy errors
-    });
 }
 
 function closeVideoModal(e) {
     // If called from backdrop click, only close when clicking outside the box
     if (e && e.target !== document.getElementById('videoModal')) return;
     const modal = document.getElementById('videoModal');
-    const video = document.getElementById('modalVideo');
-    if (!modal || !video) return;
+    const iframe = document.getElementById('modalVideo');
+    if (!modal || !iframe) return;
     modal.classList.remove('is-open');
     document.body.style.overflow = '';
-    video.pause();
-    video.currentTime = 0;
+    iframe.src = ''; // stops YouTube playback immediately
 }
 
 // Close on Escape key
