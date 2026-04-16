@@ -221,7 +221,8 @@ function initScrollReveal() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const el = entry.target;
-                    const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+                    const raw   = parseInt(el.getAttribute('data-delay') || '0', 10);
+                    const delay = Number.isFinite(raw) ? Math.min(Math.max(raw, 0), 2000) : 0;
 
                     // Apply delay via inline style for precise control
                     setTimeout(() => {
@@ -389,6 +390,44 @@ function closeVideoModal(e) {
 // Close on Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeVideoModal();
+});
+
+/* ── Delegated handler: [data-video] buttons → openVideoModal ──────────
+   Replaces all onclick="openVideoModal(...)" inline attributes in HTML.
+   Keeps HTML clean and allows CSP script-src without 'unsafe-inline'.
+   ──────────────────────────────────────────────────────────────────── */
+document.addEventListener('click', function (e) {
+    const btn = e.target.closest('[data-video]');
+    if (btn) {
+        e.preventDefault();
+        openVideoModal(btn.getAttribute('data-video'));
+    }
+});
+
+/* ── Modal backdrop + close button wired via addEventListener ──────── */
+document.addEventListener('DOMContentLoaded', function () {
+    const modal    = document.getElementById('videoModal');
+    const closeBtn = modal && modal.querySelector('.video-modal-close');
+
+    if (modal) {
+        /* Backdrop click — only close when clicking the dark overlay itself */
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeVideoModal();
+        });
+    }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () { closeVideoModal(); });
+    }
+
+    /* ── Enroll pin: close button + smooth scroll ────────────────────── */
+    const enrollPin  = document.getElementById('enrollPin');
+    const pinClose   = enrollPin && enrollPin.querySelector('.enroll-pin__close');
+
+    if (pinClose) {
+        pinClose.addEventListener('click', function (e) {
+            dismissEnrollPin(e);
+        });
+    }
 });
 
 

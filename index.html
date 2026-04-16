@@ -12,16 +12,17 @@
     <title>Expérience Esthétique J.F.W | Professional Mobile Car Detailing</title>
     <!-- ── Content Security Policy ──────────────────────────────────────
          Restricts what can load on this page.
-         • script-src 'self' 'unsafe-inline' — allows our inline onclick handlers
-         • style-src allows Google Fonts stylesheet
+         • script-src 'self' — NO unsafe-inline: all handlers in script.js
+         • style-src 'unsafe-inline' required for dynamic inline styles (canvas, animations)
          • font-src  allows Google Fonts files
          • img-src   allows Pexels CDN + data: (canvas logo) + blob:
-         • media-src 'self' — only local video files
-         • frame-src / object-src 'none' — blocks iframes and plugins
+         • media-src 'none' — videos served via Bunny.net iframe, not <video> tags
+         • frame-src — only Bunny.net embed player allowed
+         • frame-ancestors enforced via _headers file (meta CSP cannot set this)
     ──────────────────────────────────────────────────────────────────── -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' 'unsafe-inline';
+        script-src 'self';
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
         font-src 'self' https://fonts.gstatic.com;
         img-src 'self' https://images.pexels.com data: blob:;
@@ -240,11 +241,11 @@
                         <li>Complete interior cleaning, vacuuming &amp; window cleaning</li>
                         <li>Leather seats: professional deep clean, conditioning &amp; ceramic coating protection</li>
                         <li>Fabric seats: thorough deep clean using a professional-grade extraction machine</li>
-                        <li class="optional">+ Optional: Engine bay cleaning <button class="result-peek" onclick="openVideoModal('engine bay file.mp4')" title="See result">&#128247;</button></li>
-                        <li class="optional">+ Optional: Headlight restoration <button class="result-peek" onclick="openVideoModal('headlights.mp4')" title="See result">&#128247;</button></li>
+                        <li class="optional">+ Optional: Engine bay cleaning <button class="result-peek" data-video="engine bay file.mp4" title="See result">&#128247;</button></li>
+                        <li class="optional">+ Optional: Headlight restoration <button class="result-peek" data-video="headlights.mp4" title="See result">&#128247;</button></li>
                     </ul>
                     <p class="card-price-note">Prices may vary depending on vehicle model and level of dirt. A precise quote will be provided.</p>
-                    <button class="btn btn-watch btn-full" onclick="openVideoModal('0412.mp4')">&#9654; Watch Results</button>
+                    <button class="btn btn-watch btn-full" data-video="0412.mp4">&#9654; Watch Results</button>
                     <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH/services/EOZNUO5M3SINN3T3HDJULO3Q"
                        target="_blank" rel="noopener noreferrer"
                        class="btn btn-outline btn-full ripple-btn">Book This Package</a>
@@ -272,12 +273,12 @@
                         <li>Rim protection with ceramic coating</li>
                         <li>Professional hand waxing</li>
                         <li class="optional">+ Optional: Clay bar treatment</li>
-                        <li class="optional">+ Optional: Iron decontamination <button class="result-peek" onclick="openVideoModal('iron decontamination .mp4')" title="See result">&#128247;</button></li>
-                        <li class="optional">+ Optional: Engine bay cleaning <button class="result-peek" onclick="openVideoModal('engine bay file.mp4')" title="See result">&#128247;</button></li>
-                        <li class="optional">+ Optional: Headlight restoration <button class="result-peek" onclick="openVideoModal('headlights.mp4')" title="See result">&#128247;</button></li>
+                        <li class="optional">+ Optional: Iron decontamination <button class="result-peek" data-video="iron decontamination .mp4" title="See result">&#128247;</button></li>
+                        <li class="optional">+ Optional: Engine bay cleaning <button class="result-peek" data-video="engine bay file.mp4" title="See result">&#128247;</button></li>
+                        <li class="optional">+ Optional: Headlight restoration <button class="result-peek" data-video="headlights.mp4" title="See result">&#128247;</button></li>
                     </ul>
                     <p class="card-price-note">Prices may vary depending on vehicle model and level of dirt. A precise quote will be provided.</p>
-                    <button class="btn btn-watch btn-full" onclick="openVideoModal('standard package.mov')">&#9654; Watch Results</button>
+                    <button class="btn btn-watch btn-full" data-video="standard package.mov">&#9654; Watch Results</button>
                     <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH/services/CU6H47MQIGE2CKQ3SO24CLKC"
                        target="_blank" rel="noopener noreferrer"
                        class="btn btn-primary btn-full ripple-btn">Book This Package</a>
@@ -298,16 +299,16 @@
                     </div>
                     <ul class="card-features">
                         <li>Complete interior cleaning, exterior wash, window cleaning &amp; vacuuming</li>
-                        <li>Iron decontamination to remove embedded metal particles <button class="result-peek" onclick="openVideoModal('iron decontamination .mp4')" title="See result">&#128247;</button></li>
+                        <li>Iron decontamination to remove embedded metal particles <button class="result-peek" data-video="iron decontamination .mp4" title="See result">&#128247;</button></li>
                         <li>Clay bar treatment to decontaminate &amp; smooth the paint surface</li>
                         <li>Machine polish &amp; ceramic coating on paint and rims</li>
                         <li>Professional waxing for a lasting, high-gloss finish</li>
                         <li>Thorough seat cleaning — leather conditioned &amp; protected</li>
                         <li>Odor elimination treatment</li>
-                        <li>Engine bay detailing <button class="result-peek" onclick="openVideoModal('engine bay file.mp4')" title="See result">&#128247;</button></li>
-                        <li>Headlight restoration <button class="result-peek" onclick="openVideoModal('headlights.mp4')" title="See result">&#128247;</button></li>
+                        <li>Engine bay detailing <button class="result-peek" data-video="engine bay file.mp4" title="See result">&#128247;</button></li>
+                        <li>Headlight restoration <button class="result-peek" data-video="headlights.mp4" title="See result">&#128247;</button></li>
                     </ul>
-                    <button class="btn btn-watch btn-full" onclick="openVideoModal('lexperienceeee.mp4')">&#9654; Watch Results</button>
+                    <button class="btn btn-watch btn-full" data-video="lexperienceeee.mp4">&#9654; Watch Results</button>
                     <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH/services/YRAMB7QCHBLBIU35DCFCDO5L"
                        target="_blank" rel="noopener noreferrer"
                        class="btn btn-gold btn-full ripple-btn">Book This Package</a>
@@ -1043,9 +1044,9 @@
     </footer>
 
     <!-- Video Results Modal -->
-    <div id="videoModal" class="video-modal" onclick="closeVideoModal(event)">
+    <div id="videoModal" class="video-modal">
         <div class="video-modal-box">
-            <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
+            <button class="video-modal-close">&times;</button>
             <iframe id="modalVideo" src="" frameborder="0" allowfullscreen
                 allow="autoplay; encrypted-media; picture-in-picture"></iframe>
         </div>
@@ -1056,8 +1057,8 @@
        id="enrollPin"
        class="enroll-pin"
        aria-label="Enroll in a recurring detailing plan"
-       onclick="document.getElementById('loyalty').scrollIntoView({behavior:'smooth'});return false;">
-        <button class="enroll-pin__close" aria-label="Dismiss" onclick="dismissEnrollPin(event)">×</button>
+       >
+        <button class="enroll-pin__close" aria-label="Dismiss">×</button>
         <span class="enroll-pin__icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">

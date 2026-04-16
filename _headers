@@ -1,0 +1,18 @@
+/*
+  # ── HTTP Security Headers — Expérience Esthétique J.F.W ──────────────────
+  # These headers are applied to every page by Netlify at the server level.
+  # Meta-tag CSP cannot set frame-ancestors or X-Frame-Options — only headers can.
+
+  # Block this site from being embedded in any iframe (clickjacking protection)
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+
+  # Prevent MIME-type sniffing (stops browsers from guessing file types)
+  X-Content-Type-Options: nosniff
+
+  # Only send origin (no path/query) as referrer when navigating to external sites
+  # Prevents your URL from being logged by Square, Bunny.net, Google Fonts, etc.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Lock down browser features this site never uses
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
