@@ -1,0 +1,29 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Temporary / build files
+*.tmp
+*.log
+
+# Video files (too large for GitHub — host separately)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# PowerShell scripts (local tools, not part of the site)
+*.ps1
+
+# Background remover extension (local tool)
+bg-remover-extension/
+
+# Utility/dev HTML tools (not part of the public site)
+bg-editor.html
+remove-bg.html
+crop-logo.html
+check-pixels.ps1

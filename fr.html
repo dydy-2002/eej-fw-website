@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expérience Esthétique J.F.W — Détaillage automobile mobile professionnel à Gatineau. Des services de qualité qui apportent un soin attentif et fiable directement à votre porte.">
+    <meta name="keywords" content="détaillage auto, détaillage mobile, détaillage automobile professionnel, Gatineau, lave-auto, revêtement céramique, correction de peinture">
+    <meta name="author" content="Expérience Esthétique J.F.W">
+    <meta property="og:title" content="Expérience Esthétique J.F.W | Détaillage Automobile Mobile Professionnel">
+    <meta property="og:description" content="Détaillage automobile mobile professionnel qui se déplace pour vous. Un soin fiable et de qualité à Gatineau — la confiance de vos voisins.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_CA">
+    <title>Expérience Esthétique J.F.W | Détaillage Automobile Mobile Professionnel</title>
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' https://images.pexels.com data: blob:;
+        media-src 'self';
+        connect-src 'none';
+        frame-src 'none';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'none';
+    ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="#accueil" class="nav-logo" aria-label="Expérience Esthétique J.F.W — Accueil">
+                <img src="logo.png" alt="Logo Expérience Esthétique J.F.W" class="nav-logo-img" />
+            </a>
+
+            <ul class="nav-links" id="navLinks" role="navigation" aria-label="Navigation principale">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#recompenses">Programme Client</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-btn">EN</a>
+                <span class="lang-divider">|</span>
+                <a href="fr.html" class="lang-btn lang-btn--active">FR</a>
+            </div>
+
+            <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary btn-sm nav-book-btn">Réserver</a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <ul>
+                <li><a href="#accueil" class="mobile-link">Accueil</a></li>
+                <li><a href="#services" class="mobile-link">Services</a></li>
+                <li><a href="#apropos" class="mobile-link">À Propos</a></li>
+                <li><a href="#avis" class="mobile-link">Avis</a></li>
+                <li><a href="#recompenses" class="mobile-link">Programme Client</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+            <div class="mobile-lang">
+                <a href="index.html" class="lang-btn">EN</a>
+                <span class="lang-divider">|</span>
+                <a href="fr.html" class="lang-btn lang-btn--active">FR</a>
+            </div>
+            <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary mobile-book-btn">Réserver Maintenant</a>
+        </div>
+    </nav>
+
+
+    <!-- ===================== HERO ===================== -->
+    <section id="accueil" class="hero" aria-label="Section principale">
+
+        <div class="hero-bg" aria-hidden="true">
+            <video class="hero-video-bg" autoplay muted loop playsinline>
+                <source src="background.MOV" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="water-caustic"></div>
+        </div>
+
+        <!-- Bulles d'avis flottantes dans les coins du héros -->
+        <div class="review-bubbles-arena" id="reviewBubblesArena" aria-hidden="true"></div>
+
+        <!-- Épingle de localisation interactive — zone de service -->
+        <a href="#zone-service" class="hero-location-pin" aria-label="Voir notre zone de service">
+            <div class="pin-pulse-ring pin-pulse-1"></div>
+            <div class="pin-pulse-ring pin-pulse-2"></div>
+            <div class="pin-body">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+            </div>
+            <div class="pin-label">Gatineau &amp; environs</div>
+        </a>
+
+        <div class="hero-content container">
+
+            <div class="hero-badge animate-fade-up" data-delay="0">
+                <span class="badge-pulse"></span>
+                Détaillage Automobile Haut de Gamme · Gatineau
+            </div>
+
+            <div class="hero-logo animate-fade-up" data-delay="50">
+                <img src="logo.png" alt="Expérience Esthétique J.F.W" class="hero-logo-img" />
+            </div>
+
+            <p class="hero-tagline animate-fade-up" data-delay="200">
+                Où Chaque Détail Raconte une Histoire
+            </p>
+
+            <p class="hero-description animate-fade-up" data-delay="300">
+                Le détaillage automobile mobile professionnel qui se déplace pour vous. Nous apportons
+                un soin de qualité à votre entrée, votre bureau ou où que vous soyez —
+                des résultats fiables sur lesquels vous pouvez compter, à chaque fois.
+            </p>
+
+            <div class="hero-actions animate-fade-up" data-delay="400">
+                <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-primary btn-lg ripple-btn">
+                    Réserver Votre Rendez-vous
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#services" class="btn btn-ghost btn-lg">Découvrir Nos Services</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Véhicules Détaillés</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                    <span class="stat-stars-row" aria-label="5 étoiles sur 5">★★★★★</span>
+                    <span class="stat-label">Note Google</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMPLACEMENT MÉDIA 1 — Vidéo / Image de fond du héros -->
+        <div class="media-slot media-slot--hero-bg">
+            <div class="media-slot-inner">
+                <span class="ms-icon">🎬</span>
+                <span class="ms-title">Fond du Héros — Vidéo ou Photo</span>
+                <span class="ms-spec">Plein écran · Vidéo MP4 (boucle) ou image 1920×1080</span>
+                <span class="ms-hint">S'affichera derrière le logo et le texte avec un voile sombre</span>
+            </div>
+        </div>
+
+        <div class="hero-waves" aria-hidden="true">
+            <div class="wave wave-back"></div>
+            <div class="wave wave-mid"></div>
+            <div class="wave wave-front"></div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span class="scroll-label">Défiler</span>
+        </div>
+    </section>
+
+
+    <!-- ===================== SERVICES ===================== -->
+    <section id="services" class="section services" aria-label="Forfaits de services">
+
+        <div class="container">
+
+            <div class="section-header scroll-reveal">
+                <span class="section-label">Nos Forfaits</span>
+                <h2 class="section-title">Adaptés aux Besoins de Votre Véhicule</h2>
+                <p class="section-subtitle">
+                    Chaque service est effectué à la main avec des produits professionnels.
+                    Nous sommes fiers de résultats que les autres négligent.
+                </p>
+            </div>
+
+            <div class="services-grid">
+
+                <!-- ESSENTIEL -->
+                <article class="service-card scroll-reveal" data-delay="0">
+                    <div class="card-water-shimmer" aria-hidden="true"></div>
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+                    </div>
+                    <div class="card-tier">Essentiel</div>
+                    <h3 class="card-title">Nettoyage de base</h3>
+                    <p class="card-description">Nettoyage intérieur complet, vitres et aspiration — ou extérieur seulement. À partir de <strong>85 $</strong>.</p>
+                    <div class="card-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        2 – 3 heures
+                    </div>
+                    <ul class="card-features">
+                        <li>Nettoyage intérieur complet, aspiration &amp; vitres</li>
+                        <li>Sièges en cuir : nettoyage en profondeur, conditionnement et protection par revêtement céramique</li>
+                        <li>Sièges en tissu : nettoyage par extraction à la machine pour éliminer saletés et résidus incrustés</li>
+                        <li class="optional">+ En option : Nettoyage du compartiment moteur <button class="result-peek" onclick="openVideoModal('engine bay file.mp4')" title="Voir le résultat">&#128247;</button></li>
+                        <li class="optional">+ En option : Restauration des phares <button class="result-peek" onclick="openVideoModal('headlights.mp4')" title="Voir le résultat">&#128247;</button></li>
+                    </ul>
+                    <p class="card-price-note">Les prix peuvent varier selon le modèle du véhicule et le niveau de saleté. Un devis précis sera fourni.</p>
+                    <button class="btn btn-watch btn-full" onclick="openVideoModal('0412.mp4')">&#9654; Voir les Résultats</button>
+                    <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH/services/PVGIYXN5BGNXJH3NQAIAIZFD"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn btn-outline btn-full ripple-btn">Réserver Ce Forfait</a>
+                </article>
+
+                <!-- SIGNATURE (vedette) -->
+                <article class="service-card service-card--featured scroll-reveal" data-delay="100">
+                    <div class="card-water-shimmer" aria-hidden="true"></div>
+                    <div class="card-badge">Le Plus Populaire</div>
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                    </div>
+                    <div class="card-tier">Standard</div>
+                    <h3 class="card-title">Forfait Standard</h3>
+                    <p class="card-description">Un reconditionnement complet — à partir de 175 $.</p>
+                    <div class="card-time">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        3 – 5 heures
+                    </div>
+                    <ul class="card-features">
+                        <li>Nettoyage intérieur &amp; aspiration</li>
+                        <li>Nettoyage des vitres</li>
+                        <li>Lavage extérieur</li>
+                        <li>Nettoyage en profondeur des sièges &amp; tissus</li>
+                        <li>Protection des jantes avec revêtement céramique</li>
+                        <li>Cirage à la main professionnel</li>
+                        <li class="optional">+ En option : Traitement à la barre d'argile</li>
+                        <li class="optional">+ En option : Décontamination au fer <button class="result-peek" onclick="openVideoModal('iron decontamination .mp4')" title="Voir le résultat">&#128247;</button></li>
+                        <li class="optional">+ En option : Nettoyage du compartiment moteur <button class="result-peek" onclick="openVideoModal('engine bay file.mp4')" title="Voir le résultat">&#128247;</button></li>
+                        <li class="optional">+ En option : Restauration des phares <button class="result-peek" onclick="openVideoModal('headlights.mp4')" title="Voir le résultat">&#128247;</button></li>
+                    </ul>
+                    <p class="card-price-note">Les prix peuvent varier selon le modèle du véhicule et le niveau de saleté. Un devis précis sera fourni.</p>
+                    <button class="btn btn-watch btn-full" onclick="openVideoModal('standard package.mov')">&#9654; Voir les Résultats</button>
+                    <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH/services/YRAMB7QCHBLBIU35DCFCDO5L"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn btn-primary btn-full ripple-btn">Réserver Ce Forfait</a>
+                </article>
+
+                <!-- PREMIUM -->
+                <article class="service-card service-card--premium scroll-reveal" data-delay="200">
+                    <div class="card-water-shimmer card-water-shimmer--gold" aria-hidden="true"></div>
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.97 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="card-tier card-tier--gold">Premium</div>
+                    <h3 class="card-title">L'Expérience Complète</h3>
+                    <p class="card-description">Un traitement complet et professionnel de votre véhicule, de l'intérieur à l'extérieur. Pour les clients qui ne font aucun compromis sur la qualité. À partir de <strong>650 $</strong>.</p>
+                    <div class="card-time card-time--gold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        6 – 8 heures
+                    </div>
+                    <ul class="card-features">
+                        <li>Nettoyage intérieur complet, lavage extérieur, vitres &amp; aspiration</li>
+                        <li>Décontamination au fer pour éliminer les particules métalliques incrustées <button class="result-peek" onclick="openVideoModal('iron decontamination .mp4')" title="Voir le résultat">&#128247;</button></li>
+                        <li>Traitement à la barre d'argile pour décontaminer et lisser la carrosserie</li>
+                        <li>Polissage machine &amp; revêtement céramique sur la peinture et les jantes</li>
+                        <li>Cirage professionnel pour une finition brillante et durable</li>
+                        <li>Nettoyage en profondeur des sièges — cuir conditionné &amp; protégé</li>
+                        <li>Traitement d'élimination des odeurs</li>
+                        <li>Nettoyage du compartiment moteur <button class="result-peek" onclick="openVideoModal('engine bay file.mp4')" title="Voir le résultat">&#128247;</button></li>
+                        <li>Restauration des phares <button class="result-peek" onclick="openVideoModal('headlights.mp4')" title="Voir le résultat">&#128247;</button></li>
+                    </ul>
+                    <button class="btn btn-watch btn-full" onclick="openVideoModal('lexperienceeee.mp4')">&#9654; Voir les Résultats</button>
+                    <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH/services/HLJNO5US5UCK72KUVB7WBSZV"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn btn-gold btn-full ripple-btn">Réserver Ce Forfait</a>
+                </article>
+
+            </div>
+
+
+            <p class="services-note scroll-reveal">
+                Vous ne savez pas quel forfait choisir ?
+                <a href="#contact" class="text-link">Demandez un devis personnalisé</a> — nous recommanderons le service idéal selon l'état de votre véhicule.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vague séparatrice -->
+    <div class="wave-divider wave-divider--down" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,45 C240,90 480,0 720,45 C960,90 1200,0 1440,45 L1440,90 L0,90 Z" fill="#07070d"/>
+        </svg>
+    </div>
+
+
+    <!-- ===================== À PROPOS ===================== -->
+    <section id="apropos" class="section about" aria-label="À propos">
+        <div class="container">
+            <div class="about-grid">
+
+                <div class="about-content scroll-reveal">
+                    <span class="section-label">Qui Sommes-Nous</span>
+                    <h2 class="section-title about-title">Un Soin Automobile Sérieux et Fiable</h2>
+                    <p class="about-text">Chez Expérience Esthétique J.F.W, nous croyons qu'un véhicule bien entretenu est bien plus que propre — c'est le reflet d'un travail sérieux, professionnel et soigné.</p>
+                    <p class="about-text">Bâti sur l'expérience et un engagement envers la qualité, notre service mobile se déplace directement chez vous. Pas de salle d'attente. Pas de déplacement inutile. Juste des résultats constants et fiables — selon votre horaire.</p>
+                    <p class="about-text">Nous utilisons uniquement des produits professionnels et des techniques de détaillage à la main éprouvées pour restaurer, protéger et sublimer l'apparence de votre véhicule — en traitant chaque voiture comme si c'était la nôtre.</p>
+                    <p class="about-rebrand">Expérience Esthétique J.F.W, anciennement exploitée sous le nom de Car Wash J&amp;W.</p>
+                    <div class="about-points">
+                        <div class="about-point"><span class="point-check">✓</span><span>Produits de qualité professionnelle uniquement</span></div>
+                        <div class="about-point"><span class="point-check">✓</span><span>Entièrement mobile — nous nous déplaçons</span></div>
+                        <div class="about-point"><span class="point-check">✓</span><span>Attention méticuleuse à chaque détail</span></div>
+                        <div class="about-point"><span class="point-check">✓</span><span>Satisfaction garantie à chaque service</span></div>
+                    </div>
+                </div>
+
+                <div class="about-visual scroll-reveal" data-delay="150">
+                    <!-- Photo avec statistiques en surimpression -->
+                    <div class="about-photo-frame">
+                        <img src="audi-fixed.jpg" alt="Détaillage professionnel par Expérience Esthétique J.F.W" loading="lazy">
+                        <div class="about-stats-overlay">
+                            <div class="about-stat-chip">
+                                <span class="chip-number">500+</span>
+                                <span class="chip-label">Véhicules Détaillés</span>
+                            </div>
+                            <div class="about-stat-chip">
+                                <span class="chip-number">4.9 <span class="chip-star">★</span></span>
+                                <span class="chip-label">Note Google</span>
+                            </div>
+                            <div class="about-stat-chip">
+                                <span class="chip-number">100%</span>
+                                <span class="chip-label">Satisfaction Client</span>
+                            </div>
+                            <div class="about-stat-chip">
+                                <span class="chip-number">5+</span>
+                                <span class="chip-label">Années d'Expérience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="about-photo-quote">« La perfection n'est pas un accident. »</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Vague séparatrice -->
+    <div class="wave-divider wave-divider--up" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,45 C360,0 1080,90 1440,45 L1440,90 L0,90 Z" fill="#0d1b2a"/>
+        </svg>
+    </div>
+
+
+    <!-- ===================== RÉSERVATION ===================== -->
+    <section id="reservation" class="section booking" aria-label="Réserver un rendez-vous">
+        <div class="booking-bg" aria-hidden="true">
+            <div class="booking-glow"></div>
+            <div class="booking-ripple booking-ripple-1"></div>
+            <div class="booking-ripple booking-ripple-2"></div>
+            <div class="booking-ripple booking-ripple-3"></div>
+        </div>
+        <div class="container booking-content scroll-reveal">
+            <span class="section-label section-label--light">Prêt à Commencer ?</span>
+            <h2 class="booking-title">
+                Réservez Votre Rendez-vous
+                <span class="title-accent-block">Aujourd'hui</span>
+            </h2>
+            <p class="booking-description">
+                La prise de rendez-vous prend moins de 2 minutes. Choisissez votre forfait,
+                sélectionnez votre plage horaire et nous apporterons l'expérience de détaillage
+                complète directement à votre porte.
+            </p>
+            <div class="booking-features">
+                <div class="booking-feature"><span class="booking-feature-icon">📍</span><span>Nous nous déplaçons</span></div>
+                <div class="booking-feature"><span class="booking-feature-icon">⏱</span><span>Horaires flexibles</span></div>
+                <div class="booking-feature"><span class="booking-feature-icon">✓</span><span>Satisfaction garantie</span></div>
+            </div>
+            <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary btn-xl booking-main-btn ripple-btn">
+                Réserver Maintenant — C'est Simple
+                <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <p class="booking-sub">
+                Vous préférez poser des questions d'abord ?
+                <a href="#contact" class="text-link text-link--light">Demandez un devis personnalisé →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================== ZONE DE SERVICE — CARTE ===================== -->
+    <section id="zone-service" class="section service-area-section" aria-label="Zone de service">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-label">Où Nous Opérons</span>
+                <h2 class="section-title">Gatineau &amp; Environs</h2>
+                <p class="section-subtitle">Nous nous déplaçons chez vous — où que vous soyez dans la région.</p>
+            </div>
+            <div class="map-wrapper scroll-reveal">
+                <div class="map-legend">
+                    <div class="legend-item"><span class="legend-dot legend-dot--primary"></span>Zones principales (Plateau &amp; Aylmer)</div>
+                    <div class="legend-item"><span class="legend-dot"></span>Zone desservie</div>
+                    <div class="legend-item"><span class="legend-dot legend-dot--extended"></span>Couverture étendue</div>
+                </div>
+                <svg id="serviceMap" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte interactive de la zone de service Gatineau">
+
+                    <rect width="900" height="480" fill="#050d1f"/>
+                    <path d="M 0,382 L 900,374 L 900,480 L 0,480 Z" fill="#081220" opacity="0.8"/>
+
+                    <polygon points="10,22 195,22 160,68 195,108 195,175 10,188"
+                        class="map-region map-region--extended" data-name="Pontiac"
+                        fill="rgba(99,102,241,0.10)" stroke="rgba(99,102,241,0.30)" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+                    <polygon points="195,22 395,12 395,88 195,108 160,68"
+                        class="map-region" data-name="Chelsea"
+                        fill="rgba(37,99,235,0.18)" stroke="rgba(59,130,246,0.5)" stroke-width="1.5"/>
+
+                    <polygon points="10,188 195,175 235,275 195,382 10,382"
+                        class="map-region map-region--primary" data-name="Aylmer"
+                        fill="rgba(37,99,235,0.52)" stroke="rgba(96,165,250,0.92)" stroke-width="2.5"/>
+
+                    <polygon points="195,108 395,88 418,200 388,382 195,382 235,275 195,175"
+                        class="map-region" data-name="Hull"
+                        fill="rgba(37,99,235,0.32)" stroke="rgba(59,130,246,0.7)" stroke-width="2"/>
+
+                    <polygon points="395,88 590,70 618,196 582,382 388,382 418,200"
+                        class="map-region" data-name="Gatineau"
+                        fill="rgba(37,99,235,0.24)" stroke="rgba(59,130,246,0.55)" stroke-width="1.5"/>
+
+                    <!-- Le Plateau — ZONE PRINCIPALE (superposée sur le secteur Gatineau) -->
+                    <polygon points="415,92 530,82 542,190 418,198 400,152"
+                        class="map-region map-region--primary" data-name="Le Plateau"
+                        fill="rgba(37,99,235,0.50)" stroke="rgba(96,165,250,0.90)" stroke-width="2.5"/>
+
+                    <polygon points="590,70 788,54 812,268 752,382 582,382 618,196"
+                        class="map-region" data-name="Masson-Angers"
+                        fill="rgba(37,99,235,0.18)" stroke="rgba(59,130,246,0.45)" stroke-width="1.5"/>
+
+                    <polygon points="575,12 888,10 888,152 788,54 590,70 575,12"
+                        class="map-region" data-name="Buckingham"
+                        fill="rgba(37,99,235,0.14)" stroke="rgba(59,130,246,0.38)" stroke-width="1.5"/>
+
+                    <path d="M 0,378 C 120,370 240,386 370,376 C 500,366 630,382 760,374 C 820,370 860,378 900,375"
+                        fill="none" stroke="rgba(96,165,250,0.18)" stroke-width="18" stroke-linecap="round"/>
+                    <path class="map-river"
+                        d="M 0,378 C 120,370 240,386 370,376 C 500,366 630,382 760,374 C 820,370 860,378 900,375"
+                        fill="none" stroke="rgba(59,130,246,0.75)" stroke-width="7" stroke-linecap="round"/>
+
+                    <path d="M 360,12 C 363,90 368,170 364,272 C 362,318 357,352 352,378"
+                        fill="none" stroke="rgba(96,165,250,0.12)" stroke-width="12" stroke-linecap="round"/>
+                    <path class="map-river-v"
+                        d="M 360,12 C 363,90 368,170 364,272 C 362,318 357,352 352,378"
+                        fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="4.5" stroke-linecap="round"/>
+
+                    <text x="490" y="404" text-anchor="middle" fill="rgba(147,197,253,0.45)" font-size="10.5" font-family="system-ui,sans-serif" letter-spacing="2.5" font-weight="500">RIVIÈRE DES OUTAOUAIS</text>
+                    <text x="342" y="205" text-anchor="middle" fill="rgba(147,197,253,0.38)" font-size="9" font-family="system-ui,sans-serif" letter-spacing="1.5" transform="rotate(-86,342,205)">RIVIÈRE GATINEAU</text>
+                    <text x="450" y="440" text-anchor="middle" fill="rgba(148,163,184,0.38)" font-size="12.5" font-family="system-ui,sans-serif" letter-spacing="3.5" font-weight="600">OTTAWA · ONTARIO</text>
+
+                    <text x="88"  y="290" text-anchor="middle" fill="rgba(219,234,254,1.00)" font-size="13.5" font-family="system-ui,sans-serif" font-weight="700">Aylmer</text>
+                    <text x="88"  y="308" text-anchor="middle" fill="rgba(96,165,250,0.90)"  font-size="10"   font-family="system-ui,sans-serif" font-weight="600">★ Principale</text>
+                    <text x="295" y="255" text-anchor="middle" fill="rgba(219,234,254,0.92)" font-size="15"   font-family="system-ui,sans-serif" font-weight="700">Hull</text>
+                    <text x="472" y="145" text-anchor="middle" fill="rgba(219,234,254,1.00)" font-size="13"   font-family="system-ui,sans-serif" font-weight="700">Le Plateau</text>
+                    <text x="472" y="162" text-anchor="middle" fill="rgba(96,165,250,0.90)"  font-size="10"   font-family="system-ui,sans-serif" font-weight="600">★ Principale</text>
+                    <text x="498" y="290" text-anchor="middle" fill="rgba(191,219,254,0.60)" font-size="11.5" font-family="system-ui,sans-serif" font-weight="500">Gatineau</text>
+                    <text x="695" y="240" text-anchor="middle" fill="rgba(191,219,254,0.68)" font-size="11.5" font-family="system-ui,sans-serif" font-weight="600">Masson-Angers</text>
+                    <text x="745" y="36"  text-anchor="middle" fill="rgba(191,219,254,0.58)" font-size="11"   font-family="system-ui,sans-serif" font-weight="600">Buckingham</text>
+                    <text x="283" y="54"  text-anchor="middle" fill="rgba(191,219,254,0.58)" font-size="11"   font-family="system-ui,sans-serif" font-weight="600">Chelsea</text>
+                    <text x="78"  y="88"  text-anchor="middle" fill="rgba(167,139,250,0.42)" font-size="9.5"  font-family="system-ui,sans-serif">Pontiac</text>
+
+                    <!-- ── Épingle — Aylmer (principale) ── -->
+                    <g transform="translate(88,270)">
+                        <circle class="map-ping-1" r="6" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5"/>
+                        <circle class="map-ping-2" r="6" fill="none" stroke="rgba(96,165,250,0.40)" stroke-width="1.5"/>
+                        <circle r="6" fill="rgba(37,99,235,0.55)"/>
+                        <circle r="3.5" fill="#93c5fd"/>
+                        <circle r="1.8" fill="white"/>
+                    </g>
+
+                    <!-- ── Épingle — Le Plateau (principale) ── -->
+                    <g transform="translate(472,175)">
+                        <circle class="map-ping-3" r="6" fill="none" stroke="rgba(96,165,250,0.65)" stroke-width="1.5"/>
+                        <circle class="map-ping-4" r="6" fill="none" stroke="rgba(96,165,250,0.40)" stroke-width="1.5"/>
+                        <circle r="6" fill="rgba(37,99,235,0.55)"/>
+                        <circle r="3.5" fill="#93c5fd"/>
+                        <circle r="1.8" fill="white"/>
+                    </g>
+
+                    <g id="mapTooltip" opacity="0" pointer-events="none" style="transition:opacity 0.15s">
+                        <rect id="mapTooltipBg" rx="9" ry="9"
+                            fill="rgba(10,20,48,0.97)" stroke="rgba(59,130,246,0.5)" stroke-width="1"/>
+                        <text id="mapTooltipName" fill="rgba(219,234,254,0.95)" font-family="system-ui,sans-serif" font-size="13" font-weight="700"/>
+                        <text id="mapTooltipSub"  fill="rgba(147,197,253,0.8)"  font-family="system-ui,sans-serif" font-size="11"/>
+                    </g>
+                </svg>
+                <p class="map-caption">Survolez une zone pour voir les détails. Nous nous déplaçons chez vous — sans détour.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vague séparatrice -->
+    <div class="wave-divider wave-divider--reviews" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,30 C480,90 960,0 1440,60 L1440,90 L0,90 Z" fill="#0d1020"/>
+        </svg>
+    </div>
+
+
+    <!-- ===================== AVIS / TÉMOIGNAGES ===================== -->
+    <section id="avis" class="section reviews" aria-label="Témoignages clients">
+        <div class="container">
+
+            <div class="section-header scroll-reveal">
+                <span class="section-label">Témoignages Clients</span>
+                <h2 class="section-title">La Confiance des Conducteurs de Gatineau</h2>
+                <p class="section-subtitle">La confiance de nos clients — basée sur des avis clients vérifiés</p>
+                <div class="reviews-overall">
+                    <div class="overall-stars" aria-label="4,8 sur 5 étoiles">
+                        <span class="star star-full">★</span>
+                        <span class="star star-full">★</span>
+                        <span class="star star-full">★</span>
+                        <span class="star star-full">★</span>
+                        <span class="star star-full">★</span>
+                    </div>
+                    <span class="overall-rating">4.9</span>
+                    <span class="overall-label">sur Google</span>
+                </div>
+            </div>
+
+
+            <div class="reviews-cta scroll-reveal">
+                <a href="https://www.google.com/search?sca_esv=a56531b4984f7007&rlz=1CDGOYI_enCA915CA915&hl=en-US&sxsrf=ANbL-n4qbBqmzFRGMEdXmaeVOetQpabj-g:1775420621188&q=lave-auto+j%26w+gatineau+reviews"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-outline ripple-btn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18" aria-hidden="true">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    Voir Tous les Avis sur Google
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Vague séparatrice -->
+    <div class="wave-divider wave-divider--loyalty" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,60 C360,0 1080,90 1440,30 L1440,90 L0,90 Z" fill="#07070d"/>
+        </svg>
+    </div>
+
+
+    <!-- ===================== RÉCOMPENSES / PROGRAMME CLIENT ===================== -->
+    <section id="recompenses" class="section loyalty" aria-label="Programme client">
+        <div class="container">
+
+            <!-- En-tête de section -->
+            <div class="section-header scroll-reveal">
+                <span class="section-label">Programme Client</span>
+                <h2 class="section-title">Investissez dans votre véhicule. Protégez sa valeur.</h2>
+                <p class="section-subtitle">Un plan d'entretien récurrent est la meilleure décision pour votre véhicule — qu'il soit personnel ou commercial.</p>
+            </div>
+
+            <!-- Proposition de valeur — Québec -->
+            <div class="loyalty-intro scroll-reveal">
+                <div class="loyalty-intro-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="28" height="28">
+                        <line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/>
+                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
+                        <circle cx="12" cy="12" r="2.5"/>
+                    </svg>
+                </div>
+                <div class="loyalty-intro-body">
+                    <h3 class="loyalty-intro-title">Pourquoi l'entretien régulier est essentiel au Québec</h3>
+                    <p class="loyalty-intro-text">Le climat québécois est l'un des plus exigeants pour les véhicules en Amérique du Nord. Le sel de voirie hivernal, les cycles de gel-dégel, la boue printanière et les UV estivaux dégradent la peinture, la sellerie et les surfaces bien plus rapidement que la plupart des conducteurs ne le réalisent. Un entretien professionnel régulier protège activement votre investissement, préserve la valeur de revente et garantit que votre véhicule reflète toujours le standard que vous vous imposez — saison après saison.</p>
+                </div>
+            </div>
+
+            <!-- Sélecteur de clientèle -->
+            <div class="audience-toggle scroll-reveal" role="group" aria-label="Sélectionnez votre type de clientèle">
+                <button class="aud-btn aud-btn--active" id="btnIndividual" aria-pressed="true">
+                    <span class="aud-btn-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="24" height="24">
+                            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7"/>
+                        </svg>
+                    </span>
+                    <span class="aud-btn-label">
+                        <strong>Client Particulier</strong>
+                        <em>Entretien de véhicule personnel</em>
+                    </span>
+                </button>
+                <button class="aud-btn" id="btnBusiness" aria-pressed="false">
+                    <span class="aud-btn-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="24" height="24">
+                            <rect x="2" y="7" width="20" height="14" rx="1.5"/>
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                            <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+                        </svg>
+                    </span>
+                    <span class="aud-btn-label">
+                        <strong>Entreprise / Flotte</strong>
+                        <em>Véhicules d'entreprise &amp; contrats</em>
+                    </span>
+                </button>
+            </div>
+
+            <!-- ════════ PANNEAU PARTICULIER ════════ -->
+            <div class="aud-panel" id="panelIndividual">
+
+                <!-- Avantages particuliers -->
+                <div class="plan-benefits scroll-reveal">
+                    <div class="plan-benefit">
+                        <div class="plan-benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <h4 class="plan-benefit-title">Réservation Prioritaire</h4>
+                        <p class="plan-benefit-text">Les membres du programme ont accès en priorité aux plages disponibles — sans attente, sans concurrence.</p>
+                    </div>
+                    <div class="plan-benefit">
+                        <div class="plan-benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h4 class="plan-benefit-title">Protection à l'année</h4>
+                        <p class="plan-benefit-text">Des plans mensuels ou annuels protègent votre véhicule du sel, des UV et des débris saisonniers du Québec — tout au long de l'année.</p>
+                    </div>
+                    <div class="plan-benefit">
+                        <div class="plan-benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h4 class="plan-benefit-title">Tarifs Exclusifs</h4>
+                        <p class="plan-benefit-text">Les clients récurrents bénéficient de tarifs préférentiels et d'offres saisonnières inaccessibles au grand public.</p>
+                    </div>
+                </div>
+
+                <!-- Offre de bienvenue — roulette -->
+                <div class="spin-section scroll-reveal">
+                    <div class="spin-intro">
+                        <span class="spin-badge">Offre de Bienvenue Nouveau Client</span>
+                        <h3 class="spin-title">Débloquez votre récompense première visite</h3>
+                        <p class="spin-desc">Tournez la roue une fois pour obtenir un rabais exclusif sur votre premier service. Sans engagement — juste un remerciement pour nous avoir choisis.</p>
+                        <ul class="spin-possible">
+                            <li>10 % à 20 % de rabais sur votre premier détail</li>
+                            <li>Jusqu'à 30 % sur votre premier revêtement céramique</li>
+                            <li>Planification prioritaire incluse avec chaque offre</li>
+                        </ul>
+                    </div>
+                    <div class="spin-area">
+                        <div class="spin-wheel-wrap">
+                            <div class="spin-pointer-top" aria-hidden="true"></div>
+                            <canvas id="spinWheel" width="280" height="280" aria-label="Roue de récompenses"></canvas>
+                        </div>
+                        <button class="btn btn-primary spin-btn ripple-btn" id="spinBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                            Tourner la Roue
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Résultat + formulaire particulier -->
+                <div class="spin-result" id="spinResult">
+                    <div class="result-header">
+                        <div class="result-checkmark" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="result-title" id="resultTitle">Vous avez débloqué une récompense !</h3>
+                            <p class="result-sub" id="resultSub">Remplissez le formulaire ci-dessous pour réclamer votre offre. Nous confirmerons par courriel dans les 24 heures.</p>
+                        </div>
+                    </div>
+                    <div id="tryAgainWrap" style="display:none; text-align:center; margin-bottom: 24px;">
+                        <button class="btn btn-primary ripple-btn" id="tryAgainBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                            Retourner la Roue
+                        </button>
+                    </div>
+                    <div id="formWrap">
+                        <form class="lead-form" id="leadForm" novalidate>
+                            <input type="hidden" id="rewardValue" value="">
+                            <input type="hidden" id="leadClientType" value="Particulier">
+                            <div class="lead-form-row">
+                                <div class="lead-field">
+                                    <label for="leadName">Nom complet <span class="req-star">*</span></label>
+                                    <input type="text" id="leadName" placeholder="Jean-François" required maxlength="100" autocomplete="name">
+                                </div>
+                                <div class="lead-field">
+                                    <label for="leadEmail">Courriel <span class="req-star">*</span></label>
+                                    <input type="email" id="leadEmail" placeholder="vous@courriel.com" required maxlength="254" autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="lead-form-row">
+                                <div class="lead-field">
+                                    <label for="leadPhone">Téléphone <span class="lead-optional">(facultatif)</span></label>
+                                    <input type="tel" id="leadPhone" placeholder="+1 (819) 000-0000" maxlength="20" autocomplete="tel">
+                                </div>
+                                <div class="lead-field">
+                                    <label for="leadVehicle">Véhicule <span class="req-star">*</span></label>
+                                    <input type="text" id="leadVehicle" placeholder="ex. Audi e-tron 2022" required maxlength="100" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="lead-field lead-field--full">
+                                <label>Intérêt de service</label>
+                                <div class="lead-interests">
+                                    <label class="interest-opt">
+                                        <input type="radio" name="interest" value="Entretien mensuel">
+                                        <span class="interest-label">Entretien mensuel</span>
+                                    </label>
+                                    <label class="interest-opt">
+                                        <input type="radio" name="interest" value="Plan annuel">
+                                        <span class="interest-label">Plan annuel</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-full ripple-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                Réclamer ma récompense &amp; m'inscrire
+                            </button>
+                            <p class="lead-form-note">Vos informations servent uniquement à confirmer votre récompense et ne sont jamais partagées.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div><!-- /panelIndividual -->
+
+            <!-- ════════ PANNEAU ENTREPRISE ════════ -->
+            <div class="aud-panel" id="panelBusiness" style="display:none">
+
+                <!-- Avantages entreprise -->
+                <div class="plan-benefits plan-benefits--biz scroll-reveal">
+                    <div class="plan-benefit plan-benefit--biz">
+                        <div class="plan-benefit-icon plan-benefit-icon--biz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h4 class="plan-benefit-title">Image Professionnelle</h4>
+                        <p class="plan-benefit-text">Des véhicules impeccables renforcent l'image de votre marque et communiquent le professionnalisme à chaque client et partenaire.</p>
+                    </div>
+                    <div class="plan-benefit plan-benefit--biz">
+                        <div class="plan-benefit-icon plan-benefit-icon--biz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <h4 class="plan-benefit-title">Service Mobile — On Vient à Vous</h4>
+                        <p class="plan-benefit-text">Notre service se déplace directement à votre bureau, dépôt ou stationnement selon un horaire qui ne perturbe pas vos opérations.</p>
+                    </div>
+                    <div class="plan-benefit plan-benefit--biz">
+                        <div class="plan-benefit-icon plan-benefit-icon--biz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                        <h4 class="plan-benefit-title">Contrats Évolutifs</h4>
+                        <p class="plan-benefit-text">D'un seul véhicule d'entreprise à une flotte complète — des contrats mensuels, trimestriels ou annuels adaptés à votre volume.</p>
+                    </div>
+                </div>
+
+                <!-- CTA entreprise -->
+                <div class="biz-cta scroll-reveal">
+                    <div class="biz-cta-inner">
+                        <div class="biz-cta-text">
+                            <h3 class="biz-cta-title">Une flotte propre est une flotte qui travaille fort</h3>
+                            <p class="biz-cta-desc">Maintenez une image professionnelle avec des véhicules d'entreprise toujours impeccables. Notre service mobile offre des solutions récurrentes et flexibles conçues pour les entreprises de toute taille — sans interruption d'activité.</p>
+                            <ul class="biz-cta-points">
+                                <li>Service mobile — nous venons à votre emplacement</li>
+                                <li>Horaires flexibles adaptés à vos heures d'opération</li>
+                                <li>Contrats mensuels, trimestriels ou annuels disponibles</li>
+                                <li>Évolutif de 1 à 20+ véhicules</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary btn-lg ripple-btn" id="bizFormBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                            Demander un Devis Commercial
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Formulaire entreprise -->
+                <div class="spin-result biz-result" id="bizResult" style="display:none">
+                    <div class="result-header">
+                        <div class="result-checkmark result-checkmark--biz" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="result-title">Demande de Contrat Commercial</h3>
+                            <p class="result-sub">Remplissez vos coordonnées ci-dessous. Nous vous contacterons dans les 24 heures avec une proposition personnalisée pour votre flotte.</p>
+                        </div>
+                    </div>
+                    <form class="lead-form" id="bizLeadForm" novalidate>
+                        <input type="hidden" id="bizClientType" value="Entreprise">
+                        <div class="lead-form-row">
+                            <div class="lead-field">
+                                <label for="bizName">Nom complet <span class="req-star">*</span></label>
+                                <input type="text" id="bizName" placeholder="Jean-François" required maxlength="100" autocomplete="name">
+                            </div>
+                            <div class="lead-field">
+                                <label for="bizEmail">Courriel professionnel <span class="req-star">*</span></label>
+                                <input type="email" id="bizEmail" placeholder="contact@entreprise.com" required maxlength="254" autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="lead-form-row">
+                            <div class="lead-field">
+                                <label for="bizPhone">Téléphone <span class="lead-optional">(facultatif)</span></label>
+                                <input type="tel" id="bizPhone" placeholder="+1 (819) 000-0000" maxlength="20" autocomplete="tel">
+                            </div>
+                            <div class="lead-field">
+                                <label for="bizCompany">Nom de l'entreprise <span class="req-star">*</span></label>
+                                <input type="text" id="bizCompany" placeholder="ex. Entreprise XYZ inc." required maxlength="150" autocomplete="organization">
+                            </div>
+                        </div>
+                        <div class="lead-field lead-field--full">
+                            <label for="bizFleet">Taille de la flotte <span class="req-star">*</span></label>
+                            <input type="text" id="bizFleet" placeholder="ex. 4 berlines, 2 VUS — taille approximative" required maxlength="150" autocomplete="off">
+                        </div>
+                        <div class="lead-field lead-field--full">
+                            <label>Intérêt de service</label>
+                            <div class="lead-interests">
+                                <label class="interest-opt">
+                                    <input type="radio" name="bizInterest" value="Entretien mensuel de flotte">
+                                    <span class="interest-label">Entretien mensuel de flotte</span>
+                                </label>
+                                <label class="interest-opt">
+                                    <input type="radio" name="bizInterest" value="Contrat annuel">
+                                    <span class="interest-label">Contrat annuel</span>
+                                </label>
+                                <label class="interest-opt">
+                                    <input type="radio" name="bizInterest" value="Devis commercial personnalisé">
+                                    <span class="interest-label">Devis commercial personnalisé</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full ripple-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            Soumettre la demande commerciale
+                        </button>
+                        <p class="lead-form-note">Vos informations servent uniquement à préparer votre proposition et ne sont jamais partagées.</p>
+                    </form>
+                </div>
+
+            </div><!-- /panelBusiness -->
+
+        </div>
+    </section>
+
+    <!-- Vague séparatrice -->
+    <div class="wave-divider wave-divider--contact" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,45 C240,0 720,90 1440,30 L1440,90 L0,90 Z" fill="#0d1020"/>
+        </svg>
+    </div>
+
+
+    <!-- ===================== CONTACT / DEVIS ===================== -->
+    <section id="contact" class="section contact" aria-label="Demander un devis">
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-content scroll-reveal">
+                    <span class="section-label">Contactez-Nous</span>
+                    <h2 class="section-title contact-title">Demandez un Devis Personnalisé</h2>
+                    <p class="contact-description">
+                        Chaque véhicule est différent. Envoyez-nous un courriel avec quelques détails
+                        et nous vous répondrons rapidement avec un devis sur mesure.
+                    </p>
+                    <div class="quote-requirements">
+                        <h3 class="requirements-title">Veuillez inclure dans votre courriel :</h3>
+                        <ul class="requirements-list">
+                            <li><span class="req-icon">→</span><div><strong>Marque &amp; modèle du véhicule</strong><span> (ex. : BMW X5 2021)</span></div></li>
+                            <li><span class="req-icon">→</span><div><strong>État du véhicule</strong><span> (intérieur &amp; extérieur — léger, modéré ou important)</span></div></li>
+                            <li><span class="req-icon">→</span><div><strong>Service souhaité</strong><span> (Essentiel, Standard, Premium ou incertain)</span></div></li>
+                            <li><span class="req-icon">→</span><div><strong>Date préférée</strong><span> (facultatif mais utile)</span></div></li>
+                        </ul>
+                    </div>
+                    <a href="mailto:laveautojw@gmail.com?subject=Demande%20de%20devis%20-%20Exp%C3%A9rience%20Esth%C3%A9tique%20J.F.W&body=Bonjour%2C%0A%0AVéhicule%20%3A%20%0AÉtat%20%3A%20%0AService%20souhaité%20%3A%20%0ADate%20préférée%20%3A%20%0A%0AMerci."
+                       class="btn btn-primary btn-lg contact-email-btn ripple-btn">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Envoyer un Courriel
+                    </a>
+                    <p class="contact-email-display"><a href="mailto:laveautojw@gmail.com" class="text-link">laveautojw@gmail.com</a></p>
+                </div>
+
+                <div class="contact-info-card scroll-reveal" data-delay="150">
+                    <div class="info-card-header"><h3>Infos Pratiques</h3></div>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div><strong>Zone de service</strong><span>Gatineau et régions avoisinantes</span></div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📱</span>
+                            <div><strong>Réservation</strong><span>En ligne via notre lien Square</span></div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <div><strong>Courriel</strong><a href="mailto:laveautojw@gmail.com" class="text-link">laveautojw@gmail.com</a></div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏱</span>
+                            <div><strong>Délai de réponse</strong><span>Généralement dans les 24 heures</span></div>
+                        </div>
+                    </div>
+                    <div class="info-card-footer">
+                        <p>Prêt à partir ? Réservez directement :</p>
+                        <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH"
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn btn-primary btn-full ripple-btn">Réserver Maintenant</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== PIED DE PAGE ===================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="#accueil" class="footer-logo-link" aria-label="Retour en haut">
+                        <img src="logo.png" alt="Expérience Esthétique J.F.W" class="footer-logo-img" />
+                    </a>
+                    <p class="footer-tagline">Où Chaque Détail Raconte une Histoire</p>
+                    <p class="footer-desc">Détaillage automobile mobile professionnel à Gatineau. Nous apportons un soin fiable et de qualité directement chez vous.</p>
+                </div>
+
+                <nav class="footer-nav" aria-label="Navigation pied de page">
+                    <h4 class="footer-heading">Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#avis">Avis</a></li>
+                        <li><a href="#recompenses">Programme Client</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-services">
+                    <h4 class="footer-heading">Nos Forfaits</h4>
+                    <ul>
+                        <li>Essentiel — Soin de Base</li>
+                        <li>Standard — Détail Signature</li>
+                        <li>Premium — L'Expérience Complète</li>
+                    </ul>
+                </div>
+
+                <div class="footer-cta">
+                    <h4 class="footer-heading">Prêt à Réserver ?</h4>
+                    <p>Prenez rendez-vous en ligne en moins de 2 minutes.</p>
+                    <a href="https://book.squareup.com/appointments/rt2mwcl48owbr6/location/LXNHQYMYA4GEH"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn btn-primary ripple-btn">Réserver Maintenant</a>
+                    <a href="mailto:laveautojw@gmail.com" class="footer-email">laveautojw@gmail.com</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; <span id="currentYear"></span> Expérience Esthétique J.F.W. Tous droits réservés.</p>
+                <p class="footer-sub">Détaillage Automobile Mobile Professionnel · Gatineau, QC</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modale Vidéo Résultats -->
+    <div id="videoModal" class="video-modal" onclick="closeVideoModal(event)">
+        <div class="video-modal-box">
+            <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
+            <video id="modalVideo" controls playsinline></video>
+        </div>
+    </div>
+
+    <!-- ── Épingle flottante – enfant direct du body pour que position:fixed fonctionne toujours ── -->
+    <a href="#recompenses"
+       id="enrollPin"
+       class="enroll-pin"
+       aria-label="S'inscrire à un plan d'entretien récurrent"
+       onclick="document.getElementById('recompenses').scrollIntoView({behavior:'smooth'});return false;">
+        <button class="enroll-pin__close" aria-label="Fermer" onclick="dismissEnrollPin(event)">×</button>
+        <span class="enroll-pin__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8"  y1="2" x2="8"  y2="6"/>
+                <line x1="3"  y1="10" x2="21" y2="10"/>
+                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+            </svg>
+        </span>
+        <span class="enroll-pin__text">
+            <strong>Entretien Récurrent</strong>
+            <em>Économisez jusqu'à 30% à chaque visite</em>
+        </span>
+        <span class="enroll-pin__arrow" aria-hidden="true">›</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
