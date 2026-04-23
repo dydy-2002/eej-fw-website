@@ -637,7 +637,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Sent from the website Rewards / Client Program section.'
             );
 
-            window.location.href = 'mailto:laveautojw@gmail.com?subject=' + subject + '&body=' + body;
+            window.location.href = 'mailto:demandes@experienceesthetiquejfw.ca?subject=' + subject + '&body=' + body;
         });
 
         /* ── Audience toggle — Individual / Business ── */
@@ -709,7 +709,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Sent from the website Rewards / Client Program section.'
             );
 
-            window.location.href = 'mailto:laveautojw@gmail.com?subject=' + subject + '&body=' + body;
+            window.location.href = 'mailto:demandes@experienceesthetiquejfw.ca?subject=' + subject + '&body=' + body;
         });
     });
 })();

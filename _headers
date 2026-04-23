@@ -16,3 +16,6 @@
 
   # Lock down browser features this site never uses
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+  # Force HTTPS for 1 year — browsers will refuse to load the site over plain HTTP
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
