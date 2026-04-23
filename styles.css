@@ -3702,6 +3702,46 @@ p {
     }
 }
 
+/* ── Floating Call Now button ───────────────────────────────────── */
+.call-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 14px 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 24px rgba(22, 163, 74, 0.50);
+    z-index: 998;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    white-space: nowrap;
+}
+.call-float:hover {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(22, 163, 74, 0.65);
+    color: #fff;
+}
+.call-float svg { flex-shrink: 0; }
+
+@media (max-width: 600px) {
+    .call-float {
+        bottom: 18px;
+        right: 14px;
+        padding: 12px 17px;
+        font-size: 0.82rem;
+        gap: 8px;
+    }
+}
+
 /* ================================================================
    END OF STYLES
    ================================================================ */
