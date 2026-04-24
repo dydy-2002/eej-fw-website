@@ -3100,8 +3100,8 @@ p {
 
 /* Base slot */
 .media-slot {
+    display: none;          /* hidden until real media replaces this placeholder */
     position: relative;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
