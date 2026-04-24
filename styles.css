@@ -1803,7 +1803,7 @@ p {
         top: auto;
         bottom: 20%;
         right: 4%;
-        transform: scale(0.38);
+        transform: scale(0.65);
         transform-origin: bottom right;
         opacity: 0.45;
         animation: none;   /* prevent pinFloat from overriding scale(0.38) */
