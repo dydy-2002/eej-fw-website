@@ -706,16 +706,20 @@ p {
     display: none;
     flex-direction: column;
     gap: 0;
-    padding: 20px var(--container-pad) 30px;
+    padding: 0;                          /* 0 when closed so max-height:0 truly collapses it */
     background: rgba(7, 7, 13, 0.98);
-    border-top: 1px solid var(--border);
+    border-top: 1px solid transparent;  /* invisible when closed, avoids 1px bleed */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                padding    0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.1s ease;
 }
 
 .mobile-menu.open {
     max-height: 500px;
+    padding: 20px var(--container-pad) 30px;
+    border-top-color: var(--border);
 }
 
 .mobile-menu ul {
