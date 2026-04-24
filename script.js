@@ -1396,7 +1396,6 @@ function dismissEnrollPin(e) {
     const pin = document.getElementById('enrollPin');
     if (!pin) return;
     pin.classList.add('enroll-pin--dismissed');
-    sessionStorage.setItem('enrollPinDismissed', '1');
 }
 
 (function initEnrollPinSwipe() {
@@ -1405,25 +1404,16 @@ function dismissEnrollPin(e) {
         const services = document.getElementById('services');
         if (!pin) return;
 
-        /* Restore dismissed state across page navigations */
-        if (sessionStorage.getItem('enrollPinDismissed') === '1') {
-            pin.classList.add('enroll-pin--dismissed');
+        /* Show pin as soon as user scrolls more than 80px from top */
+        function updatePinVisibility() {
+            if (window.scrollY > 80) {
+                pin.classList.add('enroll-pin--visible');
+            } else {
+                pin.classList.remove('enroll-pin--visible');
+            }
         }
-
-        /* Show pin once the hero scrolls out of view; keep visible for rest of page */
-        const hero = document.getElementById('home');
-        if (hero && 'IntersectionObserver' in window) {
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        pin.classList.remove('enroll-pin--visible');
-                    } else {
-                        pin.classList.add('enroll-pin--visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            observer.observe(hero);
-        }
+        window.addEventListener('scroll', updatePinVisibility, { passive: true });
+        updatePinVisibility();
 
         /* Swipe-right detection (mobile touch only) */
         let touchStartX = 0;
