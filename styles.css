@@ -1801,11 +1801,14 @@ p {
 @media (max-width: 768px) {
     .hero-location-pin {
         top: auto;
-        bottom: 18%;
-        left: 4%;
-        right: auto;
-        transform: scale(0.58);
-        transform-origin: bottom left;
+        bottom: 20%;
+        right: 4%;
+        transform: scale(0.55);
+        transform-origin: bottom right;
+        opacity: 0.45;
+    }
+    .hero-location-pin:hover {
+        opacity: 0.85;
     }
 }
 
