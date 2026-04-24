@@ -1410,18 +1410,19 @@ function dismissEnrollPin(e) {
             pin.classList.add('enroll-pin--dismissed');
         }
 
-        /* Show pin only while the Services section is on screen */
-        if (services && 'IntersectionObserver' in window) {
+        /* Show pin once the hero scrolls out of view; keep visible for rest of page */
+        const hero = document.getElementById('home');
+        if (hero && 'IntersectionObserver' in window) {
             const observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
                     if (entry.isIntersecting) {
-                        pin.classList.add('enroll-pin--visible');
-                    } else {
                         pin.classList.remove('enroll-pin--visible');
+                    } else {
+                        pin.classList.add('enroll-pin--visible');
                     }
                 });
-            }, { threshold: 0.05 }); /* trigger as soon as 5 % of section is visible */
-            observer.observe(services);
+            }, { threshold: 0.1 });
+            observer.observe(hero);
         }
 
         /* Swipe-right detection (mobile touch only) */
