@@ -226,6 +226,14 @@ p {
     color: var(--text-secondary);
 }
 
+.reviews-rebrand-note {
+    margin-top: 0.5em;
+    font-size: 0.82rem;
+    color: var(--silver);
+    font-style: italic;
+    opacity: 0.75;
+}
+
 .canopy-note {
     display: block;
     margin-top: 0.6em;
